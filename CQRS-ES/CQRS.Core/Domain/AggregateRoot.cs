@@ -18,11 +18,11 @@ namespace CQRS.Core.Domain
         }
         public int Version { get; set; } = -1;
 
-        public IEnumerable<BaseEvent> GetCommitedChanges()
+        public IEnumerable<BaseEvent> GetUncommitedChanges()
         {
             return _changes;
         }
-        public void MarkChengesAsCommited()
+        public void MarkChangesAsCommited()
         {
             _changes.Clear();
         }
@@ -49,7 +49,7 @@ namespace CQRS.Core.Domain
             ApplyChange(@event, true);
         }
 
-        protected void ReplayEvents(IEnumerable<BaseEvent> events)
+        public void ReplayEvents(IEnumerable<BaseEvent> events)
         {
             foreach(var @event in events)
             {

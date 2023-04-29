@@ -1,4 +1,5 @@
 ﻿using CQRS.Core.Domain;
+using CQRS.Core.Events;
 using CQRS.Core.Messages;
 using Post.Common.Events;
 using System;
@@ -186,6 +187,11 @@ namespace Post.Cmd.Domain.Aggregates
         {
             _id = @event.Id;
             _active = false;
+        }
+
+        public void ReplayEvents(List<BaseEvent> events)
+        {
+            throw new NotImplementedException();
         }
     }
 }
