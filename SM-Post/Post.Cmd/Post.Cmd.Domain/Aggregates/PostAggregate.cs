@@ -189,9 +189,5 @@ namespace Post.Cmd.Domain.Aggregates
             _active = false;
         }
 
-        public void ReplayEvents(List<BaseEvent> events)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
