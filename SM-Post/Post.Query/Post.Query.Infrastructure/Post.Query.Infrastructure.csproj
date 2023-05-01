@@ -9,6 +9,9 @@
     <PackageReference Include="Confluent.Kafka" Version="1.9.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="6.0.6" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dispatchers\" />
+  </ItemGroup>
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
